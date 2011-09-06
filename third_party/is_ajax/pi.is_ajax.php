@@ -2,7 +2,7 @@
 
 $plugin_info = array(
 	'pi_name' => 'Is Ajax?',
-	'pi_version' => '1.0',
+	'pi_version' => '1.1',
 	'pi_author' => 'Trevor Davis',
 	'pi_author_url' => 'http://trevordavis.net',
 	'pi_description' => 'Determine if it is an AJAX request and return true or false',
@@ -13,7 +13,7 @@ $plugin_info = array(
  * Is AJAX
  *
  * @package			Is AJAX
- * @version			1.0
+ * @version			1.1
  * @author			Trevor Davis <http://trevordavis.net>
  * @license 		Creative Commons Attribution Non-Commercial Share Alike
  */
@@ -25,7 +25,7 @@ class Is_ajax {
 	 */
 	public function Is_ajax() {
 		$this->EE =& get_instance();
-		$this->return_data = (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest') ? '"true"' : '"false"';
+		$this->return_data = $this->EE->input->is_ajax_request() ? '"true"' : '"false"';
 	}
 	
 	public function usage() {
