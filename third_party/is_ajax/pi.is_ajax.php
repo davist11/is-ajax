@@ -13,12 +13,11 @@ $plugin_info = array(
  * Is AJAX
  *
  * @package			Is AJAX
- * @version			1.1
+ * @version			1.2
  * @author			Trevor Davis <http://trevordavis.net>
  * @license 		Creative Commons Attribution Non-Commercial Share Alike
  */
 class Is_ajax {
-	var $return_data;
 	
 	public function __construct() {
 		$this->EE =& get_instance();
