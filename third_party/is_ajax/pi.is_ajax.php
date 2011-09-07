@@ -20,10 +20,7 @@ $plugin_info = array(
 class Is_ajax {
 	var $return_data;
 	
-	/**
-	 * Constructor
-	 */
-	public function Is_ajax() {
+	public function __construct() {
 		$this->EE =& get_instance();
 		$this->return_data = $this->EE->input->is_ajax_request() ? '"true"' : '"false"';
 	}
